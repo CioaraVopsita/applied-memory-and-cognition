@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="../assets/styles.css" rel="stylesheet" type='text/css'>
+
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script type="text/javascript">
+
+        history.pushState(null, null, location.href);
+            window.onpopstate = function () {
+                history.go(1);
+            };
+    </script>
+
+    <title>Perception & Memory</title>
+
+
+</head>
+
+<body>
+  <div>
+    <p class="title"> How confident are you that the person you selected is the culprit?
+    <br>
+    <br>
+</div>
+<form method = 'post' action = '/start/videocheck'>
+<table style="table-layout:fixed;width:100%">
+<thead>
+<tr>
+<td style="font-size:18px;text-align:left"><font color='#A9A9A9'><i>Completely certain the person <b> is not </b> the culprit </i></font></td>
+<td> &nbsp </td>
+<td> &nbsp </td>
+<td> &nbsp </td>
+<td> &nbsp </td>
+<td style="font-size:18px;text-align:center"> <i>Guessing</i> </td>
+<td> &nbsp </td>
+<td> &nbsp </td>
+<td> &nbsp </td>
+<td> &nbsp </td>
+<td style="font-size:18px"><i>Completely certain the person <b> is </b> the culprit </i></td>
+</thead>
+</tr>
+<tbody>
+<tr> <td> &nbsp </td> </tr>
+<tr>
+<td style="text-align:right"><img src="../stimuli/picture/arrow/grayArrowL.png" alt="left arrow head" width="35%" height="9%"/></td>
+<td colspan="4" style="text-align:center"> <img src="../stimuli/picture/arrow/grayLine.png" alt="BlackLine" width="100%" height="7%"/> </td>
+<td> &nbsp </td>
+<td colspan="4" style="text-align:center"><img src="../stimuli/picture/arrow/Blackline.png" alt="BlackLine" width="100%" height="10%"/> </td>
+<td style="text-align:left"><img src="../stimuli/picture/arrow/arrowR.jpg" alt="right arrow head" width="50%" height="5%"/></td>
+</tr>
+<tr> <td> &nbsp </td> </tr>
+<tr>
+<td style="text-align:center"><input type="radio"name="confidence" id="postconfone1.1" value="-100" disabled required><label for="postconfone1.1" disabled>100%</label></td>
+<td style="text-align:center"><input type="radio"name="confidence" id="postconfone1.2" value="-90" disabled><label for="postconfone1.2" disabled>90%</label></td>
+<td style="text-align:center"><input type="radio"name="confidence" id="postconfone1.3" value="-80" disabled><label for="postconfone1.3" disabled>80%</label></td>
+<td style="text-align:center"><input type="radio"name="confidence" id="postconfone1.4" value="-70" disabled><label for="postconfone1.4" disabled>70%</label></td>
+<td style="text-align:center"><input type="radio"name="confidence" id="postconfone1.5" value="-60" disabled><label for="postconfone1.5" disabled>60%</label></td>
+<td style="text-align:center"><input type="radio"name="confidence" id="postconfone1.6" value="50"><label for="postconfone1.6">50%</label></td>
+<td style="text-align:center"><input type="radio"name="confidence" id="postconfone1.7" value="60"><label for="postconfone1.7">60%</label></td>
+<td style="text-align:center"><input type="radio"name="confidence" id="postconfone1.8" value="70"><label for="postconfone1.8">70%</label></td>
+<td style="text-align:center"><input type="radio"name="confidence" id="postconfone1.9" value="80"><label for="postconfone1.9">80%</label></td>
+<td style="text-align:center"><input type="radio"name="confidence" id="postconfone1.10" value="90"><label for="postconfone1.10">90%</label></td>
+<td style="text-align:center"><input type="radio"name="confidence" id="postconfone1.11" value="100"><label for="postconfone1.11">100%</label></td>
+</tr>
+</tbody>
+</table>
+
+<br>
+<br>
+  <input class = 'button' type='submit' value='Continue'/>
+</form>

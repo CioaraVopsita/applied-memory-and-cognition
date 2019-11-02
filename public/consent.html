@@ -1,0 +1,54 @@
+<!-- PUT THE ADAPT TO DEVICE AND STYLE!!!! IN ALL HTML PAGES. -->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="../assets/styles.css" rel="stylesheet" type='text/css'>
+
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<script type="text/javascript">
+
+    history.pushState(null, null, location.href);
+        window.onpopstate = function () {
+            history.go(1);
+        };
+</script>
+
+    <title>Perception & Memory</title>
+
+</head>
+
+<body>
+  <br>
+  <br>
+  <p class = "title">Statement of Age to Participate and Consent</p>
+  <p> By clicking <b>"I agree"</b>, I confirm that I have read and understand the information about this study.
+  <ol>
+    <li> I confirm that I am over the age of 18
+    <li> I understand that I can only withdraw my data within the first 72 hours
+    <li> I agree that my data will be uploaded to a public repository after anonymization
+  </ol>
+  <br>
+  <p> Please insert your Prolific ID below </p>
+
+  <form method = 'post' action = '/start/videoinstructions'>
+    <p> Prolific ID: <input type = 'text' name = 'prolificID' required>
+    <br>
+    <br>
+    <input type='submit' class="button" value='I Agree'/>
+
+    <!-- Responsive web design for the below -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

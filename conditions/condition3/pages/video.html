@@ -1,0 +1,30 @@
+<!-- PUT THE ADAPT TO DEVICE AND STYLE!!!! IN ALL HTML PAGES. -->
+<!DOCTYPE html>
+<html>
+<head>
+3
+  <link href="../../../assets/styles.css" rel="stylesheet" type='text/css'>
+
+</head>
+<body>
+
+  <video id="myvid" autoplay muted>
+ <source src="../../../stimuli/video/turtle.mp4" type="video/mp4" />
+ Your browser does not support the video tag.
+ </video>
+
+ <script type="text/javascript">
+
+   let video = document.getElementById('myvid');
+
+   video.addEventListener("ended", () => {
+       window.location.href = "videoProblems.html";});
+ </script>
+
+  <!-- <form method = 'POST' action='/'>
+    <input type = 'text' name='who' value='Yuour name'/>
+    <input type='submit' value='submit'/>
+  </form> -->
+
+</body>
+</html>

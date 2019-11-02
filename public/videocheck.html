@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="../assets/styles.css" rel="stylesheet" type='text/css'>
+
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script type="text/javascript">
+
+        history.pushState(null, null, location.href);
+            window.onpopstate = function () {
+                history.go(1);
+            };
+    </script>
+
+    <title>Perception & Memory</title>
+
+</head>
+
+<body>
+  <br>
+  <br>
+  <p class="title"> We just want to make sure that you are paying attention...
+  <br>
+  <br>
+
+  <form method = 'post' action = '/start/demographics'>
+    <p> What crime was shown in the video?
+      <p>  <select name="crime" required>
+        <option disabled selected value> -- select an option -- </option>
+        <option value="mugging">A man stealing another man's phone</option>
+        <option value="littering">A lady dropped litter</option>
+        <option value="graffiti">A man spray painted on a wall</option>
+        <option value="assault">A man hit another man</option>
+      </select>
+    <br>
+    <p> How many people were shown in the video?
+      <p>  <select name="sceneDescription" required>
+      <option disabled selected value> -- select an option -- </option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  <br>
+  <br>
+    <input type='submit' class="button" value='Continue'/>
+ </form>
+
+  <script type="text/javascript">
+
+
+  </script>
+
+  <!-- Responsive web design for the below -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

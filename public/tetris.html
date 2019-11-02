@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="../assets/styles.css" rel="stylesheet" type='text/css'>
+
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script type="text/javascript" src="../assets/tetris.js"> </script>
+    <script type="text/javascript">
+
+        history.pushState(null, null, location.href);
+            window.onpopstate = function () {
+                history.go(1);
+            };
+    </script>
+
+    <title>Perception & Memory</title>
+
+</head>
+<body onload="tetris.load(document.getElementById('game_canvas'))">
+<table width="780" cellpadding="10" cellspacing="0" border="0" align="center">
+<tr><td align="center">
+<p style="float:left;">
+<span><b>A</b> = move <i>left</i></span><br>
+<span><b>S</b> = move <i>down</i></span><br>
+<span><b>D</b> = move <i>right</i><span><br>
+<span><b>W</b> = <i>rotate</i></span><br>
+</p></td>
+<td>
+<canvas id="game_canvas" width="200" height="440" style="border: 1px solid black;"></canvas>
+</td></tr>
+</table>
+
+<form method="post" action="/start/line-up-instructions" id="tetris">
+  <input type="hidden" name="tetrisbt">
+</form>
+
+<script type="text/javascript">
+
+setTimeout(function() {
+  document.getElementById("tetris").submit();}, 120000)
+
+</script>
+  <!-- Responsive web design for the below -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

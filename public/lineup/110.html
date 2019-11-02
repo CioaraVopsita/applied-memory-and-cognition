@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="../assets/styles.css" rel="stylesheet" type='text/css'>
+
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script type="text/javascript">
+
+        history.pushState(null, null, location.href);
+            window.onpopstate = function () {
+                history.go(1);
+            };
+
+     let t0 = performance.now();
+    </script>
+
+    <title>Perception & Memory</title>
+
+</head>
+
+<body class="images">
+<form method = 'post' action = '/start/confidence'>
+<div class="img-container">
+<input type = 'image' id = "isrc1" class = "face" alt="Image cannot load">
+</div>
+<div class="img-container">
+<input type = 'image' id = "isrc2" class = "face" alt="Image cannot load">
+</div>
+<div class="img-container">
+<input type = 'image' id = "isrc3" class = "face" alt="Image cannot load">
+</div>
+</div>
+<div class="center">
+<div class="img-container">
+<input type = 'image' id = "isrc4" class = "face" alt="Image cannot load">
+</div>
+<div class="img-container">
+<input type = 'image' id = "isrc5" class = "face" alt="Image cannot load">
+</div>
+<div class="img-container">
+<input type = 'image' id = "isrc6" class = "face" alt="Image cannot load">
+</div>
+</div>
+<input type = 'hidden' id = 'array' name='array'>
+<input type = 'hidden' id = 'faceClicked' name='faceClicked'>
+<input type = 'hidden' id = 'RT' name='reactiontime'>
+</form>
+<div>
+<form method = 'post' action = '/start/reline-up-instructions'>
+<input class = 'button long' id = 'notpresent' type='submit' name="buttonClicked" value='Not present' style="width:50%"/>
+<input class = 'button long' id = 'notknow' type='submit' name="buttonClicked" value="Don't know" style="width:50%"/>
+<input type = 'hidden' id = 'array1' name='array'>
+<input type = 'hidden' id = 'RT1' name='reactiontime'>
+</form>
+</div>
+
+<script type="text/javascript">
+
+let arr = new Array(6);
+
+//x = Math.floor(Math.random()*6);
+//arr[x] = 0;
+
+for (let i=0; i < arr.length; i++) {
+	while (arr[i] == undefined) {
+		r = Math.floor(Math.random()*40 + 1);
+		if (arr.indexOf(r) === -1) {
+		arr[i] = r; }
+	}
+}
+
+document.getElementById("isrc1").src = "../../stimuli/picture/graffiti/" + arr[0] + ".jpg";
+document.getElementById("isrc2").src = "../../stimuli/picture/graffiti/" + arr[1] + ".jpg";
+document.getElementById("isrc3").src = "../../stimuli/picture/graffiti/" + arr[2] + ".jpg";
+document.getElementById("isrc4").src = "../../stimuli/picture/graffiti/" + arr[3] + ".jpg";
+document.getElementById("isrc5").src = "../../stimuli/picture/graffiti/" + arr[4] + ".jpg";
+document.getElementById("isrc6").src = "../../stimuli/picture/graffiti/" + arr[5] + ".jpg";
+document.getElementById("array").value = JSON.stringify(arr);
+document.getElementById("array1").value = JSON.stringify(arr);
+
+//Clickable images; proceeding to confidence
+let faces = document.getElementsByClassName("face");
+//let faceClicked = 0;
+for (let i=0; i < faces.length; i++) {
+    faces[i].onclick = function(){
+        let faceClicked = i+1;
+        document.getElementById("faceClicked").value = faceClicked;
+        let t1 = performance.now();
+        let time_lineup1 = t1 - t0;
+        document.getElementById("RT").value = time_lineup1;
+    }
+};
+
+document.getElementById('notpresent').onclick = function () {
+  let t1 = performance.now();
+  let time_lineup1 = t1 - t0;
+  document.getElementById("RT1").value = time_lineup1;
+  };
+document.getElementById('notknow').onclick = function () {
+  let t1 = performance.now();
+  let time_lineup1 = t1 - t0;
+  document.getElementById("RT1").value = time_lineup1;
+};
+
+</script>
+
+  <!-- Responsive web design for the below -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

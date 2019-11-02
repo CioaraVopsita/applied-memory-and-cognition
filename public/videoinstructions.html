@@ -1,0 +1,50 @@
+<!-- PUT THE ADAPT TO DEVICE AND STYLE!!!! IN ALL HTML PAGES. -->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="../assets/styles.css" rel="stylesheet" type='text/css'>
+
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script type="text/javascript">
+
+        history.pushState(null, null, location.href);
+            window.onpopstate = function () {
+                history.go(1);
+            };
+    </script>
+
+    <title>Perception & Memory</title>
+
+</head>
+<body>
+ <br>
+  <p class = "title">Video Instructions</p>
+  <br>
+<p style="font-size:20px;"><b>!!!</b> From now on, please <b>do not</b> click <b><i>"back"</i></b> or <b><i>"refresh"</i></b>! Doing so will prevent you from finishing the study and you will not be allowed to start again.
+<br>
+<p><b>On the next page a video will be displayed.</b></p>
+<br>
+<p>Please watch the video carefully because you’ll be asked questions about it later.
+<p>The video will play automatically when the page has finished loading.
+<p>When the video has finished, please press <b>"Continue"</b>.
+<br>
+<p><b>NOTE: THERE IS NO SOUND ON THE VIDEO</b>
+<br>
+<br>
+  <form method = 'post' action = '/start/video'>
+    <input type='submit' class="button" value='Continue'/>
+
+    <!-- Responsive web design for the below -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
