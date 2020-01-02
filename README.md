@@ -22,7 +22,7 @@ Example of combining Javascript for front-end development with Node.js for back-
 - The number of conditions can be changed in **randomallocation.js** by creating/removing an instance of the *condition* class.
 
 ## Authors
-- Nicoleta Condruz - feedback and movement decomposition algorithms
+- Nicoleta Condruz 
 
 ## Acknowledgments 
 Very grateful to Dr. Melissa Colloff who has had infinite patience with my experimentation.
