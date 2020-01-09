@@ -56,8 +56,8 @@ app.use('/stimuli', express.static(__dirname + '/stimuli'));
 app.get('/start', (req, res) => {
   res.sendFile(__dirname + '/public/welcome.html');});
 
-  app.get('/loaderio-3382f0ceccdcfa4e0cf7a0fd8f744eb7', (req, res) => {
-    res.sendFile(__dirname + '/loaderio-3382f0ceccdcfa4e0cf7a0fd8f744eb7.txt');});
+app.get('/loaderio-3382f0ceccdcfa4e0cf7a0fd8f744eb7', (req, res) => {
+  res.sendFile(__dirname + '/loaderio-3382f0ceccdcfa4e0cf7a0fd8f744eb7.txt');});
 
 app.post('/start/consent', (req, res) => {
   if (randomallocation.arr_of_cond.length < 1){
