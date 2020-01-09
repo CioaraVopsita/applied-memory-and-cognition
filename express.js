@@ -53,8 +53,8 @@ app.use('/assets', express.static(__dirname + '/assets'));
 app.use('/stimuli', express.static(__dirname + '/stimuli'));
 //no need to specify content type in header
 
-//app.get('/*', (req, res) => {
-  //res.sendFile(__dirname + '/public/welcome.html');});
+app.get('/*', (req, res) => {
+  res.sendFile(__dirname + '/public/welcome.html');});
 
 app.post('/start/consent', (req, res) => {
   if (randomallocation.arr_of_cond.length < 1){
