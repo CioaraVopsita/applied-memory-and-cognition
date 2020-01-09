@@ -53,7 +53,7 @@ app.use('/assets', express.static(__dirname + '/assets'));
 app.use('/stimuli', express.static(__dirname + '/stimuli'));
 //no need to specify content type in header
 
-app.get('/start', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(__dirname + '/public/welcome.html');});
 
 app.get('/loaderio-3382f0ceccdcfa4e0cf7a0fd8f744eb7', (req, res) => {
