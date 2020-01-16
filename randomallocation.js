@@ -2,13 +2,13 @@ let fs = require ('fs');
 let mysql = require('mysql');
 let {Client} = require('pg');
 
-let dbconnect = new Client({
+/*let dbconnect = new Client({
   connectionString:process.env.DATABASE_URL,
   ssl: true,
-  });
+  });*/
 
-//let conString = "postgres://postgres:polarbear06@localhost:5432/mel-exp";
-//let dbconnect = new pg.Client(conString);
+let conString = "postgres://postgres:PolarBear@06@localhost:5432/mel-exp";
+let dbconnect = new Client(conString);
 
 /*let dbconnect = mysql.createConnection({
   host: 'localhost',

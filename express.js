@@ -20,19 +20,17 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-/*let conectionString = process.env.DATABASE_URL;
-if (port == null || port == ""){
-  conectionString = "postgres://postgres:polarbear06@localhost:5432/mel-exp";
-};*/
+//CONNECT TO LOCALHOST
+let conString = "postgres://postgres:PolarBear@06@localhost:5432/mel-exp";
+let dbconnect = new Client(conString);
 
-//let conString = "postgres://postgres:polarbear06@localhost:5432/mel-exp";
-let dbconnect = new Client({
+//CONNECT TO HEROKU
+/*let dbconnect = new Client({
   connectionString:process.env.DATABASE_URL,
   ssl: true,
-  });
+  });*/
 
-//console.log(process.env.DATABASE_URL);
-
+//SQL CONNECTION
 /*let dbconnect = mysql.createConnection({
   host: 'localhost',
   user: 'mel-exp-part',
