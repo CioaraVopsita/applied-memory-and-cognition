@@ -3,14 +3,17 @@ let fs = require ('fs');
 let {Client} = require('pg');
 let mysql = require('mysql');
 
+//CONNECT TO HEROKU
 /*let dbconnect = new Client({
   connectionString:process.env.DATABASE_URL,
   ssl: true,
   });*/
 
+//CONNECT TO LOCALHOST 
 let conString = "postgres://postgres:PolarBear@06@localhost:5432/mel-exp";
 let dbconnect = new Client(conString);
 
+//CONNECT TO SQL
 /*let dbconnect = mysql.createConnection({
   host: 'localhost',
   user: 'mel-exp-part',
