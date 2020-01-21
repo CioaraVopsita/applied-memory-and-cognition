@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="../assets/styles.css" rel="stylesheet" type='text/css'>
+
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script type="text/javascript">
+
+        history.pushState(null, null, location.href);
+            window.onpopstate = function () {
+                history.go(1);
+            };
+
+            function loadimages (videoType0, reline0) {
+              let video_shown = null;
+             if (videoType0 == 1) {
+               video_shown = "graffiti";}
+             else {
+               video_shown = "mugging";}
+                document.getElementById("isrc1").src = `../stimuli/picture/${video_shown}/` + reline[0] + ".jpg";
+                document.getElementById("isrc2").src = `../stimuli/picture/${video_shown}/` + reline[1] + ".jpg";
+                document.getElementById("isrc3").src = `../stimuli/picture/${video_shown}/` + reline[2] + ".jpg";
+                document.getElementById("isrc4").src = `../stimuli/picture/${video_shown}/` + reline[3] + ".jpg";
+                document.getElementById("isrc5").src = `../stimuli/picture/${video_shown}/` + reline[4] + ".jpg";
+                document.getElementById("isrc6").src = `../stimuli/picture/${video_shown}/` + reline[5] + ".jpg";
+            }
+
+            // begin timing for relineup
+            let t0 = performance.now();
+
+    </script>
+
+    <title>Perception & Memory</title>
+
+</head>
+
+<body class="images">
+  <form method = 'post' action = '/start/confidence'>
+  <div class="img-container">
+  <input type = 'image' id = "isrc1" class = "face" alt="Image cannot load">
+  </div>
+  <div class="img-container">
+  <input type = 'image' id = "isrc2" class = "face" alt="Image cannot load">
+  </div>
+  <div class="img-container">
+  <input type = 'image' id = "isrc3" class = "face" alt="Image cannot load">
+  </div>
+  <div class="center">
+  <div class="img-container">
+  <input type = 'image' id = "isrc4" class = "face" alt="Image cannot load">
+  </div>
+  <div class="img-container">
+  <input type = 'image' id = "isrc5" class = "face" alt="Image cannot load">
+  </div>
+  <div class="img-container">
+  <input type = 'image' id = "isrc6" class = "face" alt="Image cannot load">
+  </div>
+  </div>
+  <input type = 'hidden' id = 'faceClicked' name='faceClicked2'>
+  <input type = 'hidden' id = 'RT2' name = 'reactiontime_relineup'>
+  </form>
+
+
+  <script type="text/javascript">
+
+  let reline_string = "<%= reline %>";
+  let reline = JSON.parse(reline_string);
+  let videoType = "<%= videoType %>";
+  loadimages (videoType, reline);
+
+  let faces = document.getElementsByClassName("face");
+
+    for (let i=0; i < faces.length; i++) {
+        faces[i].onclick = function(){
+          let faceClicked = i+1;
+          document.getElementById("faceClicked").value = faceClicked;
+          let t1 = performance.now();
+          let time_lineup1 = t1 - t0;
+          document.getElementById("RT2").value = time_lineup1;
+        }
+    };
+
+  </script>
+
+  <!-- Responsive web design for the below -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
