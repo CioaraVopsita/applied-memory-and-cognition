@@ -4,14 +4,14 @@ let {Client} = require('pg');
 let mysql = require('mysql');
 
 //CONNECT TO HEROKU
-/*let dbconnect = new Client({
+let dbconnect = new Client({
   connectionString:process.env.DATABASE_URL,
   ssl: true,
-  });*/
+  });
 
 //CONNECT TO LOCALHOST 
-let conString = "postgres://postgres:PolarBear@06@localhost:5432/mel-exp";
-let dbconnect = new Client(conString);
+/*let conString = "postgres://postgres:PolarBear@06@localhost:5432/mel-exp";
+let dbconnect = new Client(conString);*/
 
 //CONNECT TO SQL
 /*let dbconnect = mysql.createConnection({
@@ -44,10 +44,8 @@ let line_up_page = function (req, res) {
 
       res.sendFile(__dirname + `/public/lineup/${cond}${videoType}${target}.html`, (err) => {
         if (err) {
-        console.log("ERROR");
-        throw "Please contact Dr. Melissa Colloff to inform her about this error!";}});
-
-  }})}
+            console.log("ERROR"+err);
+            throw "Please contact Dr. Melissa Colloff to inform her about this error!";}});}});}
 
 
 module.exports = {

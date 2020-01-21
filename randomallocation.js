@@ -2,13 +2,15 @@ let fs = require ('fs');
 let mysql = require('mysql');
 let {Client} = require('pg');
 
-/*let dbconnect = new Client({
+//CONNECT TO HEROKU
+let dbconnect = new Client({
   connectionString:process.env.DATABASE_URL,
   ssl: true,
-  });*/
+  });
 
-let conString = "postgres://postgres:PolarBear@06@localhost:5432/mel-exp";
-let dbconnect = new Client(conString);
+//CONNECT TO LOCALHOST
+/*let conString = "postgres://postgres:PolarBear@06@localhost:5432/mel-exp";
+let dbconnect = new Client(conString);*/
 
 /*let dbconnect = mysql.createConnection({
   host: 'localhost',
@@ -57,12 +59,10 @@ let arr_of_cond = [condition1, condition2, condition3];
     //Put the condition in the database
     dbconnect.query('UPDATE mel_exp SET cond = ($1) WHERE biscuit = ($2)', [cond, req.cookies.participant], (err) => {
       if (err) throw err;});
-
-      console.log(req.cookies.participant);
     res.sendFile(__dirname + "/public/videoinstructions.html", (err) => {
-    if (err) {
-    console.log("ERROR");
-    throw "Please contact Dr. Melissa Colloff to inform her about this error!";}});
+        if (err) {
+        console.log("ERROR");
+        throw "Please contact Dr. Melissa Colloff to inform her about this error!";}});
     next();
   }
 
